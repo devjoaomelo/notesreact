@@ -2,6 +2,10 @@ import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 
 import { Container, Form } from './styles';
+import { Textarea } from '../../components/Textarea';
+import { NoteItem } from '../../components/NoteItem';
+import { Section } from '../../components/Section';
+import { Button } from '../../components/Button';
 
 export function New(){
     return(
@@ -14,6 +18,19 @@ export function New(){
                         <a href="/">voltar</a>
                     </header>
                     <Input placeholder="Título"/>
+                    <Textarea placeholder="Observações"/>
+                    <Section title="Links úteis">
+                        <NoteItem value="https://github.com/devjoaomelo"/>
+                        <NoteItem isNew placeholder=" Novo link"/>
+                    </Section>
+                    <Section title="Marcadores">
+                        <div className='tags'>
+                            <NoteItem value="react"/>
+                            <NoteItem isNew placeholder="Nova tag"/>
+                        </div>
+                    </Section>
+                    <Button title="Salvar"/>
+
                 </Form>
             </main>
         </Container>
