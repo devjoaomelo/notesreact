@@ -1,4 +1,5 @@
-import { RiShutDownLine } from 'react-icons/ri'
+
+import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -14,7 +15,7 @@ export const Container = styled.header`
     padding: 0 80px;
 `;
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
     display: flex;
     align-items: center;
 
